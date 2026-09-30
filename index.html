@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>UZB Drive — Realistic City Simulator</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="rotate"><div>📱<br><b>Telefonni gorizontal aylantiring</b><br>UZB Drive landscape rejimida ishlaydi.</div></div>
+<div id="loading"><img src="images/logo.png" alt="UZB Drive"><div class="loader"><span></span></div><small>3D CITY LOADING...</small></div>
+<div id="app">
+  <div id="hud">
+    <div class="stat"><small>SPEED</small><b><span id="speed">0</span> <i>KM/H</i></b></div>
+    <div class="stat"><small>MONEY</small><b>🪙 <span id="money">500</span></b></div>
+    <div class="stat"><small>FUEL</small><b><span id="fuel">100</span>%</b></div>
+    <div class="mission"><small>MISSION</small><b id="missionName">CITY DELIVERY</b><span id="missionText">GPS: yashil nuqtaga boring</span><div class="bar"><span id="missionBar"></span></div></div>
+    <button id="gpsBtn" class="pill">GPS ✓</button>
+    <button id="cameraBtn" class="square">📷</button>
+    <button id="pauseBtn" class="square">Ⅱ</button>
+  </div>
+  <div id="gpsPanel"><span>GPS</span><b id="gpsDistance">-- m</b><div id="gpsArrow">▲</div></div>
+  <div id="controls">
+    <div class="steer"><button id="left">◀</button><button id="right">▶</button></div>
+    <div class="pedals"><button id="brake">BRAKE</button><button id="gas">GAS</button></div>
+  </div>
+</div>
+<div id="pause" class="overlay"><div class="card"><h2>PAUSED</h2><button id="resume">DAVOM ETISH</button><button id="restart">QAYTA BOSHLASH</button></div></div>
+<div id="done" class="overlay"><div class="card"><div class="big">✓</div><h2>MISSION COMPLETE</h2><p>+100 🪙</p><button id="nextMission">KEYINGI MISSIYA</button></div></div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
