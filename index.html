@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#06080b">
+  <title>UZB DRIVE — City Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="rotateNotice"><div>📱</div><b>Telefonni gorizontal aylantiring</b><span>UZB DRIVE landscape rejimda ishlaydi</span></div>
+
+  <div id="loading">
+    <div class="loadLogo">🚗</div>
+    <h1>UZB DRIVE</h1>
+    <p id="loadText">3D shahar yuklanmoqda...</p>
+    <div class="loadTrack"><i id="loadBar"></i></div>
+  </div>
+
+  <main id="menu">
+    <header class="top">
+      <div class="profile"><div class="avatar">🚘</div><div><small>DRIVER</small><b>Player</b></div></div>
+      <div class="cash">🪙 <b id="menuMoney">500</b></div>
+    </header>
+
+    <section class="hero">
+      <div class="heroText"><small>REALISTIC CITY</small><h1>UZB<br><strong>DRIVE</strong></h1><p>DRIVING SIMULATOR</p></div>
+      <div class="heroCar">🚗</div>
+    </section>
+
+    <section class="menuButtons">
+      <button id="playBtn" class="primary">▶ PLAY</button>
+      <button id="garageBtn">🚘 GARAGE</button>
+      <button id="settingsBtn">⚙ SETTINGS</button>
+    </section>
+  </main>
+
+  <main id="game">
+    <div id="scene"></div>
+
+    <div class="hud">
+      <div class="hudBox"><small>SPEED</small><b><span id="speed">0</span> <em>KM/H</em></b></div>
+      <div class="hudBox"><small>MONEY</small><b>🪙 <span id="money">500</span></b></div>
+      <div class="hudBox"><small>FUEL</small><b><span id="fuel">100</span>%</b></div>
+      <div class="hudBox"><small>DAMAGE</small><b><span id="damage">0</span>%</b></div>
+    </div>
+
+    <div class="missionCard">
+      <small>MISSION</small><b id="missionTitle">Delivery</b>
+      <span id="missionText">GPS: yashil nuqtaga boring</span>
+      <div class="missionProgress"><i id="missionProgress"></i></div>
+    </div>
+
+    <div class="gps">GPS <span id="gpsArrow">●</span></div>
+    <button id="pauseBtn" class="round">Ⅱ</button>
+    <button id="cameraBtn" class="round cam">📷</button>
+
+    <div id="toast"></div>
+
+    <div class="controls">
+      <div class="steer"><button id="left">◀</button><button id="right">▶</button></div>
+      <div class="pedals"><button id="brake">BRAKE</button><button id="gas">GAS</button></div>
+    </div>
+
+    <div id="pausePanel" class="overlay">
+      <div class="panel"><h2>PAUSED</h2><button id="resumeBtn" class="primary">▶ RESUME</button><button id="exitBtn">MAIN MENU</button></div>
+    </div>
+
+    <div id="finishPanel" class="overlay">
+      <div class="panel"><div class="big">🏁</div><h2 id="finishTitle">MISSION COMPLETE</h2><p id="finishText">+100 coins</p><button id="nextBtn" class="primary">NEXT MISSION</button></div>
+    </div>
+  </main>
+
+  <main id="garage">
+    <header class="simpleHead"><button id="garageBack">←</button><h2>GARAGE</h2><span>🪙 <b id="garageMoney">500</b></span></header>
+    <div class="garageCar">🚗</div>
+    <div class="stats">
+      <h2>MY CAR</h2><p>SPORT SEDAN</p>
+      <label>POWER <i><b style="width:82%"></b></i></label>
+      <label>HANDLING <i><b style="width:74%"></b></i></label>
+      <label>BRAKE <i><b style="width:78%"></b></i></label>
+      <label>FUEL <i><b style="width:90%"></b></i></label>
+    </div>
+    <button id="upgradeBtn" class="primary bottomBtn">🔧 UPGRADE — 250 🪙</button>
+  </main>
+
+  <main id="settings">
+    <div class="settingsPanel">
+      <button id="settingsBack">←</button><h2>SETTINGS</h2>
+      <label>Graphics <select id="quality"><option value="high">HIGH</option><option value="medium">MEDIUM</option><option value="low">LOW</option></select></label>
+      <label>Vibration <input id="vibration" type="checkbox" checked></label>
+    </div>
+  </main>
+
+  <script type="importmap">
+  {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
